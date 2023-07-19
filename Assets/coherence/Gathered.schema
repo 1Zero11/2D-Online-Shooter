@@ -1,0 +1,53 @@
+component Bullet_440d69241f2368c40ba569f31e609664_UnityEngine__char_46_Transform_8287703550720165083
+  position Vector3 [compression "None"]
+
+component Coin__char_32_Spawner_8d9e8cf9c99d8da49bf515e68b4c8602_UnityEngine__char_46_Transform_2941416354374737111
+  position Vector3 [compression "None"]
+
+component Coin_f0b820c4d93e7a247ae2b37d3a1d9b32_UnityEngine__char_46_Transform_7220317334951010797
+  position Vector3 [compression "None"]
+
+component Color__char_32_Giver_9d97557bee6ca2d44a4bc9037b5278ac_ColorGiver_2768996226198540025
+  index Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Color__char_32_Giver_9d97557bee6ca2d44a4bc9037b5278ac_UnityEngine__char_46_Transform_7523759491598451211
+  position Vector3 [compression "None"]
+
+component Counter_58c1faddde8234d4692bc96b9f9ba54c_Counter_6355730035801338076
+  counter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Counter_58c1faddde8234d4692bc96b9f9ba54c_UnityEngine__char_46_Transform_7178064450329119192
+  position Vector3 [compression "None"]
+
+component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_Player_2827779321465607972
+  Health Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_UnityEngine__char_46_SpriteRenderer_2827779321465607973
+  color Color [bits "32"]
+
+component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_UnityEngine__char_46_Transform_2827779321465607974
+  position Vector3 [compression "None"]
+
+component Requester_9183cae5a9aea3f409ea10aa1e98898b_UnityEngine__char_46_Transform_7869320630424670190
+  position Vector3 [compression "None"]
+
+command Coin__char_32_Spawner_8d9e8cf9c99d8da49bf515e68b4c8602_CoinSpawner__char_46_Init_677b316c_5815_448b_b793_cd86f1bf81c5 [routing "AuthorityOnly"]
+
+command Coin_f0b820c4d93e7a247ae2b37d3a1d9b32_Coin__char_46_RequestDestroy_113a2d09_0ad2_4bec_92ba_44995a582c44 [routing "AuthorityOnly"]
+
+command Color__char_32_Giver_9d97557bee6ca2d44a4bc9037b5278ac_ColorGiver__char_46_RequestColor_a638e498_bd53_4b7b_9847_014c261072e7 [routing "AuthorityOnly"]
+  requester Entity 
+
+command Counter_58c1faddde8234d4692bc96b9f9ba54c_Counter__char_46_NextNumber_47dae746_2173_47c0_b94a_e970baeab686 [routing "AuthorityOnly"]
+  requester Entity 
+
+command Player_acaa15b2fd77b2a4080fa3b9f1088f0e_ColorRequester__char_46_GotColor_66a6aa74_9d10_4e8c_b171_36b364efe44e [routing "AuthorityOnly"]
+  color Color [bits "32"]
+
+command Player_acaa15b2fd77b2a4080fa3b9f1088f0e_Player__char_46_Hit_c2c9cd5c_69d7_4f17_9c6b_c032639a3e04 [routing "AuthorityOnly"]
+
+command Player_acaa15b2fd77b2a4080fa3b9f1088f0e_PlayerInput__char_46_Init_1037d901_6009_4a9c_a441_b730289e3050 [routing "All"]
+
+command Requester_9183cae5a9aea3f409ea10aa1e98898b_NumberRequester__char_46_GotNumber_d695b084_e661_4ae0_acc5_4b7a4ec195dc [routing "AuthorityOnly"]
+  number Int 
+

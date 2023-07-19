@@ -1,0 +1,219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6237476366285890834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Coin Spawner
+  m_EditorClassIdentifier: 
+  id: 8d9e8cf9c99d8da49bf515e68b4c8602
+  editorTarget: {fileID: 2941416354374737110, guid: 8d9e8cf9c99d8da49bf515e68b4c8602, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287152
+  objectInstantiator:
+    rid: 4746544853802287153
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287152
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 2941416354374737110, guid: 8d9e8cf9c99d8da49bf515e68b4c8602, type: 3}
+    - rid: 4746544853802287153
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &-6059935168840847481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Bullet
+  m_EditorClassIdentifier: 
+  id: 440d69241f2368c40ba569f31e609664
+  editorTarget: {fileID: 4687060242126500315, guid: 440d69241f2368c40ba569f31e609664, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287109
+  objectInstantiator:
+    rid: 4746544853802287110
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287109
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 4687060242126500315, guid: 440d69241f2368c40ba569f31e609664, type: 3}
+    - rid: 4746544853802287110
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe206545a28be2142b8fa937387721e8, type: 3}
+  m_Name: CoherenceSyncConfigRegistry
+  m_EditorClassIdentifier: 
+  configs:
+  - {fileID: 9071735849406697095}
+  - {fileID: -6059935168840847481}
+  - {fileID: 7140384486044940054}
+  - {fileID: 4244682789407224728}
+  - {fileID: 2792351736984712150}
+  - {fileID: -6237476366285890834}
+  - {fileID: 6777468875660249921}
+  loadFromAssetDatabase: 0
+--- !u!114 &2792351736984712150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Coin
+  m_EditorClassIdentifier: 
+  id: f0b820c4d93e7a247ae2b37d3a1d9b32
+  editorTarget: {fileID: 9165986497960866673, guid: f0b820c4d93e7a247ae2b37d3a1d9b32, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287150
+  objectInstantiator:
+    rid: 4746544853802287151
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287150
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 9165986497960866673, guid: f0b820c4d93e7a247ae2b37d3a1d9b32, type: 3}
+    - rid: 4746544853802287151
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &4244682789407224728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Requester
+  m_EditorClassIdentifier: 
+  id: 9183cae5a9aea3f409ea10aa1e98898b
+  editorTarget: {fileID: 5237065353528096384, guid: 9183cae5a9aea3f409ea10aa1e98898b, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287126
+  objectInstantiator:
+    rid: 4746544853802287127
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287126
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 5237065353528096384, guid: 9183cae5a9aea3f409ea10aa1e98898b, type: 3}
+    - rid: 4746544853802287127
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &6777468875660249921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Color Giver
+  m_EditorClassIdentifier: 
+  id: 9d97557bee6ca2d44a4bc9037b5278ac
+  editorTarget: {fileID: 3009328500722840582, guid: 9d97557bee6ca2d44a4bc9037b5278ac, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544860953575458
+  objectInstantiator:
+    rid: 4746544860953575459
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544860953575458
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 3009328500722840582, guid: 9d97557bee6ca2d44a4bc9037b5278ac, type: 3}
+    - rid: 4746544860953575459
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &7140384486044940054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Counter
+  m_EditorClassIdentifier: 
+  id: 58c1faddde8234d4692bc96b9f9ba54c
+  editorTarget: {fileID: 3847194382674859951, guid: 58c1faddde8234d4692bc96b9f9ba54c, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287119
+  objectInstantiator:
+    rid: 4746544853802287120
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287119
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 3847194382674859951, guid: 58c1faddde8234d4692bc96b9f9ba54c, type: 3}
+    - rid: 4746544853802287120
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &9071735849406697095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  id: acaa15b2fd77b2a4080fa3b9f1088f0e
+  editorTarget: {fileID: 2827779321465607963, guid: acaa15b2fd77b2a4080fa3b9f1088f0e, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544853802287104
+  objectInstantiator:
+    rid: 4746544853802287105
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544853802287104
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 2827779321465607963, guid: acaa15b2fd77b2a4080fa3b9f1088f0e, type: 3}
+    - rid: 4746544853802287105
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
