@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     public void Init(NetworkEntityState owner, Vector3 target)
     {
         this.owner = owner;
-        direction = (target - transform.position).normalized;
+        direction = target.normalized;
         inited = true;
     }
 

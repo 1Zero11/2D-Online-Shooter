@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class StateManager
 {
+
 }
 
 

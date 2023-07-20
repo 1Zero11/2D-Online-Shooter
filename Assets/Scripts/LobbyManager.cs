@@ -1,7 +1,9 @@
+using Coherence;
 using Coherence.Cloud;
 using Coherence.Runtime;
 using Coherence.Toolkit;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -16,18 +18,24 @@ public class LobbyManager : MonoBehaviour
     public TMP_InputField textInputField;
     
     private ReplicationServerRoomsService replicationServerRoomsService;
+    private CloudRooms cloudRooms;
     private string roomName;
 
     private void OnEnable()
     {
         replicationServerRoomsService ??= new ReplicationServerRoomsService();
-        roomsService = replicationServerRoomsService;
+        //roomsService = replicationServerRoomsService;
+
+        bridge = FindObjectOfType<CoherenceBridge>();
+
+        StartCoroutine(WaitForCloudService());
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        bridge = FindObjectOfType<CoherenceBridge>();
+        
     }
 
     // Update is called once per frame
@@ -38,7 +46,7 @@ public class LobbyManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadSceneAsync("Game");
+        SceneManager.LoadSceneAsync("Loading");
     }
 
     public void CreateRoom()
@@ -61,6 +69,7 @@ public class LobbyManager : MonoBehaviour
         if (!AssertRequestResponse("Error during room creation", requestResponse.Status, requestResponse.Exception))
         {
             joinNextCreatedRoom = false;
+            Debug.Log(requestResponse.Exception);
             return;
         }
 
@@ -113,4 +122,18 @@ public class LobbyManager : MonoBehaviour
             JoinRoom(foundroom);
         }
     }
+
+    private IEnumerator WaitForCloudService()
+    {
+        cloudRooms ??= bridge.CloudService.Rooms;
+        while (!cloudRooms.IsLoggedIn)
+        {
+            yield return null;
+        }
+
+        
+        roomsService = cloudRooms.GetRoomServiceForRegion("us");
+    }
+
+
 }

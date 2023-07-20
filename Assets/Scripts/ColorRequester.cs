@@ -11,12 +11,8 @@ public class ColorRequester : MonoBehaviour
 
     private void Start()
     {
-        var bridge = FindObjectOfType<CoherenceBridge>();
-
-        bridge.ClientConnections.OnSynced += conn =>
-        {
-            AskColor();
-        };
+        if (color == Color.clear)
+            Invoke(nameof(AskColor), 1f);
     }
 
     public void AskColor()

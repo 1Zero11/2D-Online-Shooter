@@ -19,6 +19,15 @@ component Counter_58c1faddde8234d4692bc96b9f9ba54c_Counter_6355730035801338076
 component Counter_58c1faddde8234d4692bc96b9f9ba54c_UnityEngine__char_46_Transform_7178064450329119192
   position Vector3 [compression "None"]
 
+component Game__char_32_Manager_e64e8343430fdef489c9172a49651adc_UnityEngine__char_46_Transform_7599517948488933720
+  position Vector3 [compression "None"]
+
+component Huh_a1ab3994159bb8946b24a3c3c28a2eef_UnityEngine__char_46_Transform_4995229233709036342
+  position Vector3 [compression "None"]
+
+component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_CoinCollector_3534918425276488611
+  collected Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
 component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_Player_2827779321465607972
   Health Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
@@ -27,6 +36,7 @@ component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_UnityEngine__char_46_SpriteRen
 
 component Player_acaa15b2fd77b2a4080fa3b9f1088f0e_UnityEngine__char_46_Transform_2827779321465607974
   position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
 
 component Requester_9183cae5a9aea3f409ea10aa1e98898b_UnityEngine__char_46_Transform_7869320630424670190
   position Vector3 [compression "None"]
@@ -40,6 +50,16 @@ command Color__char_32_Giver_9d97557bee6ca2d44a4bc9037b5278ac_ColorGiver__char_4
 
 command Counter_58c1faddde8234d4692bc96b9f9ba54c_Counter__char_46_NextNumber_47dae746_2173_47c0_b94a_e970baeab686 [routing "AuthorityOnly"]
   requester Entity 
+
+command Game__char_32_Manager_e64e8343430fdef489c9172a49651adc_MainGameManager__char_46_ShowVictory_80d0961a_d2ce_4280_81b5_cd8d04601bc0 [routing "All"]
+  color Color [bits "32"]
+  coins Int 
+
+command Game__char_32_Manager_e64e8343430fdef489c9172a49651adc_MainGameManager__char_46_Victory_efc232bb_f749_4310_8c26_9b0d24cb3f1b [routing "All"]
+
+command Huh_a1ab3994159bb8946b24a3c3c28a2eef_VIctoryHandler__char_46_ShowVictory_2ce047e9_d7c8_476f_b06a_3db68a6ed6e9 [routing "All"]
+  color Color [bits "32"]
+  coins Int 
 
 command Player_acaa15b2fd77b2a4080fa3b9f1088f0e_ColorRequester__char_46_GotColor_66a6aa74_9d10_4e8c_b171_36b364efe44e [routing "AuthorityOnly"]
   color Color [bits "32"]

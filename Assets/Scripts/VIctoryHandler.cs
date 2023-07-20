@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class CoinCollector : MonoBehaviour
+public class VIctoryHandler : MonoBehaviour
 {
-    public TMP_Text coinsText;
-
-    private int collected = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +16,10 @@ public class CoinCollector : MonoBehaviour
         
     }
 
-    public void Collect()
+    public void ShowVictory(Color color, int coins)
     {
-        collected++;
-        coinsText.text = collected.ToString();
+        Debug.Log("Show Victory");
+        var shower = FindObjectOfType<VictoryShower>();
+        shower.ShowVictoryScreen(color, coins);
     }
 }

@@ -76,7 +76,37 @@ MonoBehaviour:
   - {fileID: 2792351736984712150}
   - {fileID: -6237476366285890834}
   - {fileID: 6777468875660249921}
+  - {fileID: 499597931285835667}
+  - {fileID: 7225355152436726562}
   loadFromAssetDatabase: 0
+--- !u!114 &499597931285835667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Game Manager
+  m_EditorClassIdentifier: 
+  id: e64e8343430fdef489c9172a49651adc
+  editorTarget: {fileID: 7599517948488933722, guid: e64e8343430fdef489c9172a49651adc, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544880037920942
+  objectInstantiator:
+    rid: 4746544880037920943
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544880037920942
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 7599517948488933722, guid: e64e8343430fdef489c9172a49651adc, type: 3}
+    - rid: 4746544880037920943
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
 --- !u!114 &2792351736984712150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +218,34 @@ MonoBehaviour:
       data:
         prefab: {fileID: 3847194382674859951, guid: 58c1faddde8234d4692bc96b9f9ba54c, type: 3}
     - rid: 4746544853802287120
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &7225355152436726562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Huh
+  m_EditorClassIdentifier: 
+  id: a1ab3994159bb8946b24a3c3c28a2eef
+  editorTarget: {fileID: 1457765614897000210, guid: a1ab3994159bb8946b24a3c3c28a2eef, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 4746544880037920983
+  objectInstantiator:
+    rid: 4746544880037920984
+  references:
+    version: 2
+    RefIds:
+    - rid: 4746544880037920983
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 1457765614897000210, guid: a1ab3994159bb8946b24a3c3c28a2eef, type: 3}
+    - rid: 4746544880037920984
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
 --- !u!114 &9071735849406697095
 MonoBehaviour:

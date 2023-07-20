@@ -11,12 +11,14 @@ public class Player : MonoBehaviour
 
     public GameObject[] HealthGos;
     public GameObject BulletPrefab;
+    public MainGameManager gameManager;
 
     CoherenceSync _sync;
 
     private void Awake()
     {
         _sync = GetComponent<CoherenceSync>();
+        gameManager = FindObjectOfType<MainGameManager>();
     }
 
     public void ChangeHealthValue(int newValue)
@@ -25,8 +27,12 @@ public class Player : MonoBehaviour
 
         if (Health <= 0)
         {
-            if(_sync.HasStateAuthority)
+            if (_sync.HasStateAuthority)
+            {
+                gameManager.OnPlayerDeath(this);
+                //gameManager.GetComponent<CoherenceSync>().SendCommand<MainGameManager>(nameof(MainGameManager.Victory), Coherence.MessageTarget.All);
                 Destroy(gameObject);
+            }
         }
         UpdateHealthBar(Health, Health);
     }
@@ -40,11 +46,11 @@ public class Player : MonoBehaviour
     }
 
 
-    public void SpawnBullet(Vector3 target)
+    public void SpawnBullet(Vector3 direction)
     {
         GameObject bulletGo = Instantiate(BulletPrefab, transform.position, Quaternion.identity);
         var entityState = _sync.EntityState;
-        bulletGo.GetComponent<Bullet>().Init(entityState, target);
+        bulletGo.GetComponent<Bullet>().Init(entityState, direction);
     }
 
     public void Hit()

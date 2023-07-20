@@ -7,6 +7,9 @@ public class PlayerInput : MonoBehaviour
     private Player player;
     public bool inited;
     public float[] borders; // up down right left
+    public Joystick joystick;
+
+    private Vector2 lastDirection = Vector2.right;
 
     private void Start()
     {
@@ -16,8 +19,8 @@ public class PlayerInput : MonoBehaviour
     {
         if (inited)
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = Input.GetAxis("Horizontal") + joystick.Direction.x;
+            float v = Input.GetAxis("Vertical") + joystick.Direction.y;
 
             if (transform.position.y > borders[0])
             {
@@ -46,12 +49,14 @@ public class PlayerInput : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                Vector3 pos = Input.mousePosition;
-                pos.z = 10f;
-                pos = Camera.main.ScreenToWorldPoint(pos);
-
-                player.SpawnBullet(pos);
+                Shoot();
             }
+
+            if(h!=0 || v!=0)
+            {
+                lastDirection = new Vector2(h, v);
+            }
+            
         }
 
     }
@@ -60,5 +65,15 @@ public class PlayerInput : MonoBehaviour
     {
         inited = true;
         Debug.Log("Player Inited");
+    }
+
+    public void Shoot()
+    {
+        //Vector3 pos = Input.mousePosition;
+        //pos.z = 10f;
+        //pos = Camera.main.ScreenToWorldPoint(pos);
+
+        player.SpawnBullet(lastDirection);
+
     }
 }

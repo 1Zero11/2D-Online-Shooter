@@ -64,6 +64,88 @@ namespace Coherence.Generated
 		}
 	}
 
+	public class Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_715604fc_52a2_4f26_90ca_248221e0337a : RotationBinding
+	{
+		public override string CoherenceComponentName => "WorldOrientation";
+
+		public override uint FieldMask => 0b00000000000000000000000000000001;
+
+		public override Quaternion Value
+		{
+			get => (Quaternion)(UnityEngine.Quaternion)(coherenceSync.coherenceRotation);
+			set => coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value);
+		}
+
+		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
+		{
+			var value = ((WorldOrientation)coherenceComponent).value;
+			return value;
+		}
+		
+		public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, double time)
+		{
+			var update = (WorldOrientation)coherenceComponent;
+			if (RuntimeInterpolationSettings.IsInterpolationNone) 
+			{
+				update.value = Value;
+			}
+			else 
+			{
+				update.value = GetInterpolatedAt(time);
+			}
+			return update;
+		}
+
+		public override ICoherenceComponentData CreateComponentData()
+		{
+			return new WorldOrientation();
+		}
+	}
+
+	public class Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_7b0f513a_75e2_4c53_85e7_37449ac04450 : IntBinding
+	{
+		private global::CoinCollector CastedUnityComponent;
+
+		protected override void OnBindingCloned()
+		{
+			CastedUnityComponent = (global::CoinCollector)UnityComponent;
+		}
+		public override string CoherenceComponentName => "Player_acaa15b2fd77b2a4080fa3b9f1088f0e_CoinCollector_3534918425276488611";
+
+		public override uint FieldMask => 0b00000000000000000000000000000001;
+
+		public override int Value
+		{
+			get => (int)(System.Int32)(CastedUnityComponent.collected);
+			set => CastedUnityComponent.collected = (System.Int32)(value);
+		}
+
+		protected override int ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
+		{
+			var value = ((Player_acaa15b2fd77b2a4080fa3b9f1088f0e_CoinCollector_3534918425276488611)coherenceComponent).collected;
+			return value;
+		}
+		
+		public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, double time)
+		{
+			var update = (Player_acaa15b2fd77b2a4080fa3b9f1088f0e_CoinCollector_3534918425276488611)coherenceComponent;
+			if (RuntimeInterpolationSettings.IsInterpolationNone) 
+			{
+				update.collected = Value;
+			}
+			else 
+			{
+				update.collected = GetInterpolatedAt(time);
+			}
+			return update;
+		}
+
+		public override ICoherenceComponentData CreateComponentData()
+		{
+			return new Player_acaa15b2fd77b2a4080fa3b9f1088f0e_CoinCollector_3534918425276488611();
+		}
+	}
+
 	public class Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_c53e0da3_8377_4e14_adfd_3a8755bdbde6 : IntBinding
 	{
 		private global::Player CastedUnityComponent;
@@ -170,6 +252,8 @@ namespace Coherence.Generated
 		private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
 		{
 			["3493eddc-ba56-4f3d-88f2-c12377d7992d"] = new Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_3493eddc_ba56_4f3d_88f2_c12377d7992d(),
+			["715604fc-52a2-4f26-90ca-248221e0337a"] = new Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_715604fc_52a2_4f26_90ca_248221e0337a(),
+			["7b0f513a-75e2-4c53-85e7-37449ac04450"] = new Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_7b0f513a_75e2_4c53_85e7_37449ac04450(),
 			["c53e0da3-8377-4e14-adfd-3a8755bdbde6"] = new Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_c53e0da3_8377_4e14_adfd_3a8755bdbde6(),
 			["ce65511c-04bc-43d2-b04e-bd1f7ae79ca3"] = new Binding_acaa15b2fd77b2a4080fa3b9f1088f0e_ce65511c_04bc_43d2_b04e_bd1f7ae79ca3(),
 		};
